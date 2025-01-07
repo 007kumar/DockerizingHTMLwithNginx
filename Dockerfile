@@ -1,13 +1,13 @@
-# Use the official Nginx base image
+# official Nginx base image
 FROM nginx:latest
 
-# Copy the custom Nginx configuration file
+# This will copy custom Nginx configuration file.
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Copy the HTML file to the Nginx web root
+# To Copy the custom HTML file to the Nginx web root
 COPY index.html /usr/share/nginx/html/index.html
 
-# Expose port 80
+# Expose and define port 80
 EXPOSE 80
 
 # Start Nginx server
